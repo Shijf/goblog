@@ -9,4 +9,5 @@ require (
 	github.com/imdario/mergo v0.3.11 // indirect
 	github.com/pelletier/go-toml v1.8.1 // indirect
 	golang.org/x/sys v0.0.0-20201223074533-0d417f636930 // indirect
+	golang.org/x/tools v0.0.0-20201224043029-2b0845dc783e // indirect
 )

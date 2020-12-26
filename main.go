@@ -2,7 +2,7 @@
  * @Github: https://github.com/shijf
  * @Author: shijf
  * @Date: 2020-12-26 08:56:44
- * @LastEditTime: 2020-12-26 08:57:11
+ * @LastEditTime: 2020-12-26 09:02:44
  * @LastEditors: shijf
  * @FilePath: /golang.learnku.com/main.go
  * @Description:
@@ -15,6 +15,7 @@ import (
 )
 
 func handlerFunc(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	if r.URL.Path == "/" {
 		fmt.Fprint(w, "<h1>Hello, 欢迎来到 goblog</h1>")
 	} else if r.URL.Path == "/about" {
