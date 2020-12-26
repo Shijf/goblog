@@ -2,7 +2,7 @@
  * @Github: https://github.com/shijf
  * @Author: shijf
  * @Date: 2020-12-26 08:56:44
- * @LastEditTime: 2020-12-26 09:02:44
+ * @LastEditTime: 2020-12-26 09:16:44
  * @LastEditors: shijf
  * @FilePath: /golang.learnku.com/main.go
  * @Description:
@@ -22,6 +22,7 @@ func handlerFunc(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, "此博客是用以记录编程笔记，如您有反馈或建议，请联系 "+
 			"<a href=\"mailto:summer@example.com\">summer@example.com</a>")
 	} else {
+		w.WriteHeader(http.StatusNotFound)
 		fmt.Fprint(w, "<h1>请求页面未找到 :(</h1>"+
 			"<p>如有疑惑，请联系我们。</p>")
 	}
